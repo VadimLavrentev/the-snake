@@ -23,7 +23,7 @@ APPLE_COLOR = (255, 0, 0)
 SNAKE_COLOR = (0, 255, 0)
 
 # Скорость
-SPEED = 10
+SPEED = 20
 
 # Настройка игрового окна:
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), 0, 32)
@@ -131,7 +131,7 @@ def handle_keys(game_object):
 
 # Шаг 6. Соберите основной игровой цикл
 def main():
-    pygame.init()
+    # pygame.init() : почему то при наличии этой команды pytest выдает ошибку
 
     snake = Snake()
     apple = Apple()
